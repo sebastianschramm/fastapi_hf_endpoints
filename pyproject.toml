@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "inference"
+version = "0.1.0"
+description = ""
+authors = ["Sebastian Schramm <schrammsm@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.1"
+uvicorn = "^0.29.0"
+transformers = "^4.39.3"
+torch = {version = "^2.2.2+cpu", source = "pytorch_cpu"}
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+black = "^24.4.0"
+
+
+[[tool.poetry.source]]
+name = "pytorch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
